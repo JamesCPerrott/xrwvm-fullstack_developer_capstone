@@ -5,7 +5,35 @@ img {
   margin-inline: auto;
 }
 
-/* Card Layout */
+/* Contact Layout */
+.contact {
+  border: 2px solid rgb(144, 142, 148);
+  display: flex;
+  flex-direction: column;
+  margin: 1% 5%;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 3px 10px rgb(144, 142, 148);
+}
+
+/* Contact Header */
+.contact-header {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: rgb(37, 137, 219);
+    font-family: sans-serif;
+    margin-bottom: 0em;
+}
+
+/* Contact Item*/
+.contact-item {
+    font-size: 1rem;
+    color: rgb(88, 159, 218);
+    font-family: sans-serif;
+    margin-bottom: 0em;
+}
+
+/* Card Layout currently defaulting to bootstrap */
 .card {
   border: 3px solid rgb(103, 102, 105);
   display: flex;

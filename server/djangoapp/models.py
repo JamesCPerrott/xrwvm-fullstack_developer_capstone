@@ -32,19 +32,19 @@ class CarModel(models.Model):
             MaxValueValidator(2023),
             MinValueValidator(2015)
         ])
-    #CAR_COLORS = [
-    #    ('BLACK', 'Black'),
-    #    ('BLUE', 'Blue'),
-    #    ('BROWN', 'Brown'),
-    #    ('GRAY', 'Gray'),
-    #    ('GREEN', 'Green'),
-    #    ('GOLD', 'Gold'),
-    #    ('ORANGE', 'Orange'),
-    #    ('RED', 'Red'),
-    #    ('SILVER', 'Silver'),
-    #    ('WHITE', 'White'),
-    #    ('YELLOW', 'Yellow'),
-    #]
-    #color = models.CharField(max_length=8, choices=CAR_COLORS, default='WHITE')
+    CAR_COLORS = [
+        ('BLACK', 'Black'),
+        ('BLUE', 'Blue'),
+        ('BROWN', 'Brown'),
+        ('GRAY', 'Gray'),
+        ('GREEN', 'Green'),
+        ('GOLD', 'Gold'),
+        ('ORANGE', 'Orange'),
+        ('RED', 'Red'),
+        ('SILVER', 'Silver'),
+        ('WHITE', 'White'),
+        ('YELLOW', 'Yellow'),
+    ]
+    color = models.CharField(max_length=8, choices=CAR_COLORS, default='WHITE')
     def __str__(self):
         return self.name  # Return the name as the string representation

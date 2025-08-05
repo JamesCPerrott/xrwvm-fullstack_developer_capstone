@@ -31,7 +31,7 @@ const Dealer = () => {
     const retobj = await res.json();
     
     if(retobj.status === 200) {
-      setDealer(retobj.dealer)
+      setDealer(retobj.dealer[0])
     }
   }
 
@@ -67,9 +67,9 @@ const Dealer = () => {
 
 
 return(
-  <div style={{margin:"20px"}}>
+  <div>
       <Header/>
-      <div style={{marginTop:"10px"}}>
+      <div style={{margin:"20px", marginTop:"10px"}}>
       <h1 style={{color:"grey"}}>{dealer.full_name}{postReview}</h1>
       <h4  style={{color:"grey"}}>{dealer['city']},{dealer['address']}, Zip - {dealer['zip']}, {dealer['state']} </h4>
       </div>

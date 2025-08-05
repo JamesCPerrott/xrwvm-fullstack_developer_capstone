@@ -6,6 +6,10 @@
   background-color: darkturquoise;
   min-width: 350px;
   width: 30%;
+  border: 2px solid rgb(144, 142, 148);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 3px 10px rgb(144, 142, 148);
 }
 
 .inputs{

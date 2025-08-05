@@ -93,8 +93,9 @@ const PostReview = () => {
   return (
     <div>
       <Header/>
-      <div  style={{margin:"5%"}}>
-      <h1 style={{color:"darkblue"}}>{dealer.full_name}</h1>
+      <div className="postbox" style={{width: "80%", margin: "auto", marginTop: "5%"}} >
+      <div style={{margin: "auto"}}>
+      <h1 style={{color:"grey"}}>{dealer.full_name}</h1>
       <textarea id='review' cols='50' rows='7' onChange={(e) => setReview(e.target.value)}></textarea>
       <div className='input_field'>
       Purchase Date <input type="date" onChange={(e) => setDate(e.target.value)}/>
@@ -116,6 +117,7 @@ const PostReview = () => {
       <div>
       <button className='postreview' onClick={postreview}>Post Review</button>
       </div>
+    </div>
     </div>
     </div>
   )

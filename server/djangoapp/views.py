@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from django.contrib.auth.models import User
 from django.contrib.auth import logout
 from django.http import JsonResponse
@@ -37,7 +36,7 @@ def login_user(request):
 def logout_user(request):
     # Terminate user session
     logout(request)
-    data = {"userName":""}
+    data = {"userName": ""}
     # Return empty username
     return JsonResponse(data)
 
@@ -57,7 +56,7 @@ def registration(request):
         # Check if user already exists
         User.objects.get(username=username)
         username_exist = True
-    except Exception as err:
+    except User.DoesNotExist:
         # If not, simply log this is a new user
         logger.debug("{} is new user".format(username))
 
@@ -135,11 +134,13 @@ def add_review(request):
         try:
             response = post_review(data)
             return JsonResponse({"status": 200, "response": response})
-        except:
+        except Exception as err:
+            print(f"Unexpected {err=}, {type(err)=}")
+            print("Review Posting Error")
             return JsonResponse(
                 {
                     "status": 401,
-                     "message": "Error in posting review"
+                    "message": "Error in posting review"
                 }
             )
     else:

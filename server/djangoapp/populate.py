@@ -13,11 +13,12 @@ def initiate():
     car_make_instances = []
     for data in car_make_data:
         car_make_instances.append(
-            CarMake.objects.create(name=data['name'], description=data['description'])
+            CarMake.objects.create(
+                name=data['name'],
+                description=data['description'],
+            )
         )
 
-
-    # Create CarModel instances with the corresponding CarMake instances
     car_model_data = [
       {
         "name": "Pathfinder",
@@ -28,103 +29,102 @@ def initiate():
       },
       {
         "name": "Qashqai",
-        "type":"SUV",
+        "type": "SUV",
         "year": 2023,
         "color": "RED",
         "car_make": car_make_instances[0],
       },
       {
         "name": "XTRAIL",
-        "type":"SUV",
+        "type": "SUV",
         "year": 2023,
         "color": "BLUE",
         "car_make": car_make_instances[0],
       },
       {
         "name": "A-Class",
-        "type":"SUV",
+        "type": "SUV",
         "year": 2023,
         "color": "GREEN",
         "car_make": car_make_instances[1],
       },
       {
         "name": "C-Class",
-        "type":"SUV",
+        "type": "SUV",
         "year": 2023,
         "color": "BLACK",
         "car_make": car_make_instances[1],
       },
       {
         "name": "E-Class",
-        "type":"SUV",
+        "type": "SUV",
         "year": 2023,
         "color": "BLUE",
         "car_make": car_make_instances[1],
       },
       {
         "name": "A4",
-        "type":"SUV",
+        "type": "SUV",
         "year": 2023,
         "color": "BROWN",
         "car_make": car_make_instances[2],
       },
       {
         "name": "A5",
-        "type":"SUV",
+        "type": "SUV",
         "year": 2023,
         "color": "GRAY",
         "car_make": car_make_instances[2],
       },
       {
         "name": "A6",
-        "type":"SUV",
+        "type": "SUV",
         "year": 2023,
         "color": "SILVER",
         "car_make": car_make_instances[2],
       },
       {
         "name": "Sorrento",
-        "type":"SUV",
+        "type": "SUV",
         "year": 2023,
         "color": "GOLD",
         "car_make": car_make_instances[3],
       },
       {
         "name": "Carnival",
-        "type":"SUV",
+        "type": "SUV",
         "year": 2023,
         "color": "WHITE",
         "car_make": car_make_instances[3],
       },
       {
         "name": "Cerato",
-        "type":"SEDAN",
+        "type": "SEDAN",
         "year": 2023,
         "color": "BLACK",
         "car_make": car_make_instances[3],
       },
       {
         "name": "Corolla",
-        "type":"SEDAN",
+        "type": "SEDAN",
         "year": 2023,
         "color": "BLUE",
         "car_make": car_make_instances[4],
       },
       {
         "name": "Camry",
-        "type":"SEDAN",
+        "type": "SEDAN",
         "year": 2023,
         "color": "GRAY",
         "car_make": car_make_instances[4],
       },
       {
         "name": "Kluger",
-        "type":"SUV",
+        "type": "SUV",
         "year": 2023,
         "color": "WHITE",
         "car_make": car_make_instances[4],
       },
-        # Add more CarModel instances as needed
     ]
 
     for data in car_model_data:
